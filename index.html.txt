@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mission DevOps Réussie</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #3730a3, #6d28d9);
+    color: #eef2ff;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  .badge {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .text-emerald { color: #34d399; }
+  .text-indigo { color: #93c5fd; }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 500px;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .btn1 {
+    background: #34d399;
+    color: #0f172a;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .btn2 {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .card-panel {
+    background: rgba(255,255,255,0.10);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+  }
+
+  .card {
+    background: rgba(255,255,255,0.08);
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .status-success { color: #34d399; font-weight: bold; }
+  .status-warn { color: #fcd34d; font-weight: bold; }
+
+  .features-box {
+    width: 80%;
+    margin: 50px auto 0;
+    background: rgba(255,255,255,0.12);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .feature-card {
+    background: rgba(255,255,255,0.08);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .feature-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .feature-desc {
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  @media(max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    h1 {
+      font-size: 38px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- Left Section -->
+    <div>
+      <div class="badge">
+        <span>🌩 Pipeline • Monitoring • Automatisation</span>
+      </div>
+
+      <h1>
+        <span class="text-emerald">Mission</span><br>
+        DevOps <span class="text-indigo">Réussie</span>
+      </h1>
+
+      <p>
+        Une interface claire pour piloter vos pipelines, surveiller l'infrastructure et automatiser les déploiements — conçue pour les équipes modernes qui veulent fiabilité et rapidité.
+      </p>
+
+      <div class="buttons">
+        <button class="btn1">✔ Lancer le diagnostic</button>
+        <button class="btn2">Voir les fonctionnalités</button>
+      </div>
+    </div>
+
+    <!-- Right panel -->
+    <div class="card-panel">
+      <h3>Tableau de bord • Mission DevOps</h3>
+      <p style="font-size:13px; opacity:0.7;">Vue synthétique des pipelines et ressources.</p>
+
+      <div class="card">
+        <div>
+          <div class="card-title">Pipeline #42</div>
+          <div style="font-size:12px; opacity:0.7;">Terminé • 3m 12s</div>
+        </div>
+        <div class="status-success">Success</div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-title">Serveur Prod</div>
+          <div style="font-size:12px; opacity:0.7;">CPU 62% • RAM 71%</div>
+        </div>
+        <div class="status-warn">Warning</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Logs récents</div>
+        <div style="font-size:12px; opacity:0.6;">Voir</div>
+      </div>
+
+      <div style="display:flex; gap:10px; margin-top:15px;">
+        <button class="btn1" style="flex:1; background:#6366f1; color:white;">Redéployer</button>
+        <button class="btn2" style="flex:1;">Configurer</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Features -->
+<div class="features-box">
+  <div style="display:flex; justify-content:space-between;">
+    <div class="feature-title">Fonctionnalités clés</div>
+    <div style="font-size:13px; opacity:0.7;">Automatisation • Observabilité • Sécurité</div>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-title">CI/CD</div>
+      <div class="feature-desc">Pipelines reproductibles et testés.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-title">Monitoring</div>
+      <div class="feature-desc">Alertes temps réel et dashboards.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-title">Infra as Code</div>
+      <div class="feature-desc">Provisioning fiable.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
